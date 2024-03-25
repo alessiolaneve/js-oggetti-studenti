@@ -20,9 +20,9 @@ console.log(studenti)
 //     console.log(studente.nome + ' ' + studente.cognome)
 // }
 
-studenti.forEach(function(studente) {
-    console.log(studente.nome + ' ' + studente.cognome)
-});
+// studenti.forEach(function(studente) {
+//     console.log(studente.nome + ' ' + studente.cognome)
+// });
 
 
 // Dare la possibilità all’utente, attraverso 3 prompt(),
@@ -34,20 +34,46 @@ studenti.forEach(function(studente) {
 // poi commentate il ciclo for e usate il forEach
 
 
-const nuovoStudente =  {
-    nome:prompt('Inserisci il nome del nuovo studente.'), 
-    cognome:prompt('Inserisci il cognome del nuovo studente.'), 
-    eta:prompt('Inserisci gli anni del nuovo studente.'),
-}
-console.log(nuovoStudente)
-studenti.push(nuovoStudente) 
-console.log(studenti)
+// const nuovoStudente =  {
+//     nome:prompt('Inserisci il nome del nuovo studente.'), 
+//     cognome:prompt('Inserisci il cognome del nuovo studente.'), 
+//     eta:prompt('Inserisci gli anni del nuovo studente.'),
+// }
+// console.log(nuovoStudente)
+// studenti.push(nuovoStudente) 
+// console.log(studenti)
 
 // for (let i = 0; i < studenti.length; i++) {
 //     const studente = studenti[i];
 //     console.log(`${studente.nome} `+`${studente.cognome} `+`${studente.eta}`)
 // }
 
-studenti.forEach(function(studente) {
-    console.log(`${studente.nome} `+`${studente.cognome} `+`${studente.eta}`)
-});
+// studenti.forEach(function(studente) {
+//     console.log(`${studente.nome} `+`${studente.cognome} `+`${studente.eta}`)
+// });
+
+
+// BONUS FORM
+const nameElement = document.getElementById('name')
+const surnElement = document.getElementById('surname')
+const ageElement = document.getElementById('age')
+const buttonElement = document.getElementById('submit')
+let studente = {}
+
+
+
+buttonElement.addEventListener('click', function () {
+
+    studente.name = nameElement.value
+
+    studente.surname = surnElement.value
+    
+    studente.age = ageElement.value
+    // console.log(age)
+    // console.log(`${name} ${surname} ${age}`)
+    console.log(studente)
+    
+})
+    
+
+
