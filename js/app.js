@@ -15,8 +15,11 @@ const studenti = [
 
 console.log(studenti)
 
-for (let i = 0; i < studenti.length; i++) {
-    const studente = studenti[i];
-    console.log(studente.nome + ' ' + studente.cognome)
-}
+// for (let i = 0; i < studenti.length; i++) {
+//     const studente = studenti[i];
+//     console.log(studente.nome + ' ' + studente.cognome)
+// }
 
+studenti.forEach(function(studente) {
+    console.log(studente.nome + ' ' + studente.cognome)
+});
